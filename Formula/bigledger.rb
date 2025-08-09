@@ -1,12 +1,12 @@
 class Bigledger < Formula
   desc "BigLedger CLI - Unified command-line interface for BigLedger operations"
   homepage "https://github.com/bigledger/blg-bigledger-cli"
-  version "1.1.0"
+  version "1.1.1"
   
   # Using JAR distribution from S3 (public access)
   # The main repository is PRIVATE, so we use S3 for public distribution
-  url "https://public.aimatrix.com/bigledger/v1.1.0/blg-bigledger-cli-1.1.0.jar"
-  sha256 "7a41420a1432176461a48cdf2b5a9e21406e66074dc2f9a3f10259c40a750da5"
+  url "https://public.aimatrix.com/bigledger/v1.1.1/blg-bigledger-cli-1.1.1.jar"
+  sha256 "84f6ef0c693b030c4c2db498a551f876b2a61f8a16f1210b0e394f0b5403859f"
   
   depends_on "openjdk@17"
   
@@ -31,10 +31,11 @@ class Bigledger < Formula
     <<~EOS
       BigLedger CLI v#{version} has been installed!
       
-      New in v1.1.0:
-      • Doctor command for system diagnostics
-      • Workspace folder management (BLG_WORKSPACE_FOLDER)
-      • Default workspace at ~/blg-workspace
+      New in v1.1.1:
+      • Fixed "No line found" error in chat mode
+      • Improved input handling and error recovery
+      • Case-insensitive commands (/HELP now works)
+      • All edge cases handled gracefully
       
       Quick start:
         bigledger --version       # Check version
